@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="margin-form">
+    Registration
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+            @Html.ActionLink("Register as a restaurant", "RegisterRestaurant", "Account", new {aria=""}, new { @class = "registerRestaurant" })
+            <p class="registerText">
+                Register as a restaurant
+            </p>
+        </div>
+        <div class="col-md-6">
+            @Html.ActionLink("Register as a customer", "RegisterCustomer", "Account", new { aria = "" }, new { @class = "registerCustomer" })
+            <p class="registerText">Register as a customer</p>
+        </div>
+    </div>
+</div>

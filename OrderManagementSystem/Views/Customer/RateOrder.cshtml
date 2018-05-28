@@ -10,7 +10,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h2 class="margin-form">Oceń swoje zamówienie</h2>
+        <h2 class="margin-form">Rate your order</h2>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.OrderId, htmlAttributes: new { @class = "control-label col-md-2" })

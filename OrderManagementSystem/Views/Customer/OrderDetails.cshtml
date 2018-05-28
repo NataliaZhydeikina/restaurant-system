@@ -1,11 +1,11 @@
 ﻿@model OrderManagementSystem.Models.Order.OrderForm
 
 @{
-    ViewBag.Title = "details of the order";
+    ViewBag.Title = "Details of the order";
     Layout = "~/Views/Shared/_CustomerLayout.cshtml";
 }
 
-<h2 class="margin-form">details of the order</h2>
+<h2 class="margin-form">Details of the order</h2>
 
 <div class="col-md-12">
     <hr/>
@@ -34,19 +34,18 @@
 </div>
 <div class="col-md-12">
     <fieldset>
-        <legend>
-            Products on order </ legend>
+        <legend>Products on order </legend>
             <table id="orderItemsTable" class="table table-hover">
                 <thead>
-                    <Tr>
-                        <th> Menu </ th>
-                        <th> Category </ th>
-                        <th> Product name </ th>
-                        <th> Description </ th>
-                        <th> Price </ th>
-                        <th> No. </ th>
-                        <th> Total </ th>
-                    </Tr>
+                    <tr>
+                        <th> Menu </th>
+                        <th> Category </th>
+                        <th> Product name </th>
+                        <th> Description </th>
+                        <th> Price </th>
+                        <th> No. </th>
+                        <th> Total </th>
+                    </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model.OrderItems)

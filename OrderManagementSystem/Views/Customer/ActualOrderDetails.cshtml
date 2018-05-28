@@ -10,16 +10,10 @@
 
 <div class="col-md-12 margin-form ">
     <div class="col-md-8">
-        <h4>
-            Current order status: <b>
-                @Model.OrderStatus.GetDisplayName() </b> </h4>
-                <h5>
-                    Total of order: <b>
-                        @Model.TotalPrice PLN </b> </h5>
-                        <h5>
-                            Table number: <b>
-                                @Model.TableNumber </b> </h5>
-                                <h5> Notes: <b> @Model.OrderComments </b> </h5>
+        <h4> Current order status: <b> @Model.OrderStatus.GetDisplayName() </b> </h4>
+        <h5> Total of order: <b> @Model.TotalPrice PLN </b> </h5>
+        <h5> Table number: <b> @Model.TableNumber </b> </h5>
+        <h5> Notes: <b> @Model.OrderComments </b> </h5>
     </div>
     <div class="col-md-4">
         @if (@Model.OrderStatus == OrderStatus.AssignedToWaiter && @Model.OrderItems.All(x => x.OrderItemStatus == OrderItemStatus.Delivered))
@@ -51,8 +45,7 @@
 </div>
 <div class="col-md-12">
     <fieldset>
-        <legend>
-            Your current order </legend>
+        <legend> Your current order </legend>
             <table id="orderItemsTable" class="table table-hover">
                 <thead>
                     <tr>

@@ -8,6 +8,6 @@
         /// <summary>
         /// Biznesowy błąd walidacji
         /// </summary>
-        public const string BusinessRulesViolation = "Błąd walidacji danych.";
+        public const string BusinessRulesViolation = "Data validation error.";
     }
 }

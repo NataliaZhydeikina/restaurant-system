@@ -39,27 +39,27 @@
         /// <summary>
         /// Nowa pozycja na zamówieniu
         /// </summary>
-        [Display(Name="Nowa")]
+        [Display(Name= "New")]
         New = 1,
         /// <summary>
         /// Pozycja potwierdzona
         /// </summary>
-        [Display(Name="Potwierdzona")]
+        [Display(Name= "Confirmed")]
         Approved = 2,
         /// <summary>
         /// Pozycja w przygotowaniu 'W kuchni'
         /// </summary>
-        [Display(Name = "W przygotowaniu w kuchni")]
+        [Display(Name = "In preparation in the kitchen")]
         InProgressInKitchen = 3,
         /// <summary>
         /// Pozycja gotowa do podania
         /// </summary>
-        [Display(Name = "Gotowa do podania")]
+        [Display(Name = "Ready to serve")]
         Ready = 4,
         /// <summary>
         /// Pozycja dostarczona do stolika
         /// </summary>
-        [Display(Name="Dostarczona do stolika")]
+        [Display(Name= "Delivered to the table")]
         Delivered = 5
     }
 }

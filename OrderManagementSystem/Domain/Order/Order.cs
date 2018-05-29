@@ -75,27 +75,27 @@
         /// <summary>
         /// Zamówienie otwarte (klient cały czas może dodawać nowe produkty do zamówienia)
         /// </summary>
-        [Display(Name="Otwarte")]
+        [Display(Name= "Open")]
         Open = 1,
         /// <summary>
         /// Przypisane do kelnera
         /// </summary>
-        [Display(Name = "Przypisane do kelnera")]
+        [Display(Name = "Assigned to the waiter")]
         AssignedToWaiter = 2,
         /// <summary>
         /// Zamknięte zamówienie (klient chce zapłacić i opuścić restauracje)
         /// </summary>
-        [Display(Name="Zamknięte")]
+        [Display(Name= "Closed")]
         Closed = 3,
         /// <summary>
         /// Zamówienie opłacone
         /// </summary>
-        [Display(Name="Opłacone")]
+        [Display(Name= "paid")]
         Paid = 4,
         /// <summary>
         /// Zamówienie odrzucone (klient się rozmyślił)
         /// </summary>
-        [Display(Name = "Odrzucone")]
+        [Display(Name = "Rejected")]
         Rejected = 5
     }
 }

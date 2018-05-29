@@ -30,7 +30,7 @@
 
             if ((workerForm.Position == Position.Manager && worker.Position != Position.Manager)
                 || (workerForm.Position != Position.Manager && worker.Position == Position.Manager))
-                throw new BusinessException(BusinessErrorCodes.BusinessRulesViolation, "Nie można zmieniać Managera restauracji!");
+                throw new BusinessException(BusinessErrorCodes.BusinessRulesViolation, "You can not change the Restaurant Manager! ");
 
             workerBuilder.UpdateRestaurantWorkerEntity(worker, workerForm);
 

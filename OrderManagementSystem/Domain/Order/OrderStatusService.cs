@@ -55,7 +55,7 @@
             if (order.OrderStatus == OrderStatus.Open)
                 order.OrderStatus = OrderStatus.AssignedToWaiter;
             else
-                throw new BusinessException(BusinessErrorCodes.BusinessRulesViolation, "Tylko zamówienie w statusie 'Otwarte' może zostać przypisane do kelnera.");
+                throw new BusinessException(BusinessErrorCodes.BusinessRulesViolation, "Only the order in the status' Open 'may be assigned to the waiter.");
         }
 
         /// <summary>
@@ -67,7 +67,7 @@
             if (order.OrderStatus == OrderStatus.AssignedToWaiter && !order.OrderItems.Any(x => x.OrderItemStatus == OrderItemStatus.Approved))
                 order.OrderStatus = OrderStatus.Closed;
             else
-                throw new BusinessException(BusinessErrorCodes.BusinessRulesViolation, "Tylko zamówienie w statusie 'Przypisane do kelnera' może zostać zamknięte.");
+                throw new BusinessException(BusinessErrorCodes.BusinessRulesViolation, "Only the order in the status 'Assigned to waiter' can be closed.");
         }
 
         /// <summary>
@@ -79,7 +79,7 @@
             if (order.OrderStatus == OrderStatus.Closed)
                 order.OrderStatus = OrderStatus.Paid;
             else
-                throw new BusinessException(BusinessErrorCodes.BusinessRulesViolation, "Tylko zamówienie w statusie 'Zamknięte' może zostać opłacone.");
+                throw new BusinessException(BusinessErrorCodes.BusinessRulesViolation, "Only an order in the 'Closed' status can be paid for.");
 
         }
 
@@ -92,7 +92,7 @@
             if (!order.OrderItems.Any(x => x.OrderItemStatus == OrderItemStatus.InProgressInKitchen))
                 order.OrderStatus = OrderStatus.Rejected;
             else
-                throw new BusinessException(BusinessErrorCodes.BusinessRulesViolation, "Tylko zamówienie, na którym nie ma elementów w statusie 'W przygotowaniu w kuchni' może zotać odrzucone.");
+                throw new BusinessException(BusinessErrorCodes.BusinessRulesViolation, "Only the order on which there are no items in the status. In preparation in the kitchen can be rejected.");
         }
     }
 }

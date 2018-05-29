@@ -36,7 +36,7 @@
             if (Security.Login(user.Login, user.Password))
                 return RedirectByRole();
             else
-                return RedirectToAction("Login", new {message = "Logowanie nie powiodło się, spróbuj ponownie."});
+                return RedirectToAction("Login", new {message = "Login failed, please try again."});
         }
 
         /// <summary>
@@ -78,7 +78,7 @@
                 var restaurantCmdResult = ExecuteCommand(new CreateRestaurantCommand(restaurantForm));
 
                 if (restaurantCmdResult.Success)
-                    return RedirectToAction("Login", new { message = "Restauracja zarejestrowana pomyślnie. Zaloguj się na dane Managera." });
+                    return RedirectToAction("Login", new { message = "Restaurant registered successfully. Log in to the Manager data." });
             }
 
             return View(restaurantForm);
@@ -112,7 +112,7 @@
                 var cmdResult = ExecuteCommand(new CreateCustomerCommand(customerForm));
 
                 if (cmdResult.Success)
-                    return RedirectToAction("Login", new {message = "Twoje konto zostało zarejestrowane. Możesz się zalogować."});
+                    return RedirectToAction("Login", new {message = "Your account has been registered. You can log in."});
             }
 
             return View(customerForm);

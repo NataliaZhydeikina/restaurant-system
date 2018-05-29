@@ -259,7 +259,7 @@
             if(cmdResult.Success)
                 return RedirectToAction("RateOrder", new {orderId = orderId});
             else
-                return new HttpStatusCodeResult(400, "Nie wszystkie elementy zamówienia zostały dostarczone do stolika, poczekaj chwilkę! :)");
+                return new HttpStatusCodeResult(400, "Not all line items have been delivered to the table, wait a moment! :)");
         }
 
         /// <summary>

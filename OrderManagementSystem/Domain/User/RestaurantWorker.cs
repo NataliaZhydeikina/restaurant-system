@@ -51,9 +51,9 @@
     /// </summary>
     public enum Position
     {
-        [Display(Name="Kelner")]
+        [Display(Name= "Waiter")]
         Waiter = 1,
-        [Display(Name = "Kucharz")]
+        [Display(Name = "Cook")]
         Cook = 2,
         [Display(Name = "Manager")]
         Manager = 3

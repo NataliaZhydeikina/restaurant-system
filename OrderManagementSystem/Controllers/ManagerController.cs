@@ -219,7 +219,7 @@
                 InitializeInfo();
                 productForm.ProductCategories = Query(new GetProductCategoriesByRestaurantIdQuery(restaurantId.Value));
                 productForm.Menus = Query(new GetMenusByRestaurantIdQuery(restaurantId.Value));
-                ViewBag.Message = "Wystąpił problem podczas dodawania nowego produktu. Spróbuj ponownie.";
+                ViewBag.Message = "There was a problem adding a new product. Try again.";
 
                 return View(productForm);
             }
